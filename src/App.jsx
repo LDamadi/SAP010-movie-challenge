@@ -1,15 +1,16 @@
-//import { useState } from 'react';
-import './App.css'
-//import chaveApi from './Chave'; 
+
+import './App.css';
 
 function App() {
   return (
-  <div className="App">
-    <h2>Films_Box</h2>
-  </div>
+    <div className="App">
+      <h2>FilmsBox</h2>
+      {/* Outros componentes e conteúdo do seu aplicativo */}
+    </div>
   );
 }
 
 export default App;
+
 
 
