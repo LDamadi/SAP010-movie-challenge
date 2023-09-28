@@ -1,26 +1,16 @@
 import React from "react";
+import { DefaultContext } from "react-icons";
 
-const DEFAULT_PLACEHOLDER_IMAGE =
-  "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg";
-
-
-const Movie = ({ movie }) => {
-  const poster =
-    movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
+const Movie = (props) => {
   return (
-    <div className="movie">
-      <h2>{movie.Title}</h2>
-      <div>
-        <img
-          width="200"
-          alt={`The movie titled: ${movie.Title}`}
-          src={poster}
-        />
-      </div>
-      <p>({movie.Year})</p>
-    </div>
+    <>
+           {props.movies.map((movies, index)=> (
+           <div className="d-flex justify-content-start m-3">
+                <img src={movies.Poster} alt="movie"></img>
+           </div>
+           ))}
+    </>
   );
 };
-
 
 export default Movie;
